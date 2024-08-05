@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
+RUN source .env
 # Install app dependencies
 RUN npm install
 RUN apt-get update -y && apt-get install -y openssl
