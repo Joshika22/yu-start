@@ -13,7 +13,6 @@ RUN apt-get update -y && apt-get install -y openssl
 
 # Copy the rest of the app source code to the working directory
 COPY . .
-
 RUN npx prisma generate
 # Build the Svelte app
 RUN npm run build
