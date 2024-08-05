@@ -1,5 +1,4 @@
 import { FunctionDeclarationSchemaType, VertexAI, type Tool } from '@google-cloud/vertexai';
-import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { taskRepository } from '../repository/task_repository';
 import type { TaskPostRequestType } from '$lib/types/request_types';
 import { env } from '$env/dynamic/private';
