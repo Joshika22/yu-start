@@ -91,7 +91,7 @@ gcloud artifacts repositories create yu-start-repo --repository-format=docker --
 
 DOCKER_URL=$LOCATION-docker.pkg.dev/$PROJECT_ID/yu-start-repo/yu-start-image
 
-docker build . -t $DOCKER_URL 
+docker build . -t $DOCKER_URL --build-arg MY_VAR=$(grep MY_VAR .env | cut -d '=' -f2)
 
 docker push $DOCKER_URL
 
